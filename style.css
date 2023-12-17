@@ -4,6 +4,7 @@
   --primary-text-color: #47aef3;
   --selected-text-color: #c3e4e8;
   --unselected-text-color: #959d99;
+  --main-text-color: #959D99;
   --border-color: #1b1f23;
   --border-size: 1px;
   --h1-font-size: 48px;
@@ -17,6 +18,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "JetBrains Mono", monospace;
+}
+body {
+  overflow-x: hidden;
 }
 
 .all-sections {
@@ -38,11 +42,11 @@ h2 {
   font-size: var(--h2-font-size);
 }
 
-h3 {
+h3,
+.navbar-part-navbar a {
   font-size: var(--h3-font-size);
 }
-
-p {
+2 p {
   font-size: var(--p-font-size);
 }
 .title-part {
@@ -68,7 +72,6 @@ p {
   width: 100%;
   height: 41px;
   display: flex;
-  flex-flow: ;
 }
 
 .unusablebar-part h3 {
@@ -82,11 +85,13 @@ p {
 
 .unusablebutton-part {
   width: 78px;
-  height: 1175px;
+  height: 1129px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: absolute;
+  top: 162px;
 }
 
 .unusablebutton-part-selected-img {
@@ -118,34 +123,96 @@ p {
 }
 
 .unusablebutton-part-magnifying-glass {
-
 }
 
 .navbar-part {
   width: 273px;
-  height: 1118px;
+  height: 1129px;
   background-color: var(--secondary-background-color);
+  position: absolute;
+  top: 162px;
+  left: 77px;
+}
+
+.navbar-part-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-part-div-header {
+  margin: 11px 112px 11px 18px;
+  color: var(--primary-text-color);
+}
+
+.navbar-part-div-header-img {
+  margin: 5px 38px 16px 0px;
+}
+
+.navbar-part-navbar {
+  color: var(--unselected-text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-part-navbar a {
+  margin: 21px 0px 0px 18px;
+  text-decoration: none;
+  color: var(--unselected-text-color);
+}
+
+.navbar-part-navbar-exception {
+  margin: 23px;
+}
+
+.navbar-part-navbar-hover:hover {
+  color: var(--selected-text-color);
 }
 
 .path-part {
   width: 1557px;
   height: 50px;
   background-color: var(--secondary-background-color);
+  position: absolute;
+  left: 350px;
 }
 
 .maintext-part {
-  width: 1557px;
-  height: 763px;
+  width: 100vw;
+  height: 1129px;
+  position: absolute;
+  left: 350px;
+}
+
+.maintext-part-exception {
+  color: var(--primary-text-color);
+  padding: 4px 0px 4px 14px;
+}
+
+
+.maintext-part-text h1 {
+  color: var(--main-text-color);
+  margin-left: 14px;
+}
+
+.maintext-part-text p {
+  color: var(--main-text-color);
+  margin-left: 21px;
 }
 
 .console-part {
   width: 1557px;
   height: 365px;
   background-color: var(--secondary-background-color);
+  position: absolute;
+  left: 350px;
+  bottom: 23px;
+  border-top-right-radius: 20px;
 }
 
 .bottom-part {
   width: 100%;
   height: 23px;
   justify-content: flex-end;
+  position: absolute;
+  bottom: 0px;
 }
